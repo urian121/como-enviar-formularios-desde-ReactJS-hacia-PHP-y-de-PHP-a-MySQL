@@ -12,9 +12,14 @@ label {
   display: flex;
   justify-content: flex-start;
 }
+h3 {
+  color: blue;
+  font-weight: 600;
+  font-size: 30px;
+}
 hr {
   height: 0.1px !important;
-  color: #06c046 !important;
+  color: blue !important;
   width: 100% !important;
   background-color: red;
 }
