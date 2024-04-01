@@ -35,7 +35,6 @@ function App() {
       });
       toast.success("Amigo registrado correctamente.");
 
-      // Aquí obtenemos el amigo recién creado desde la respuesta del servidor
       const nuevoAmigo = response.data;
       console.log("Nuevo amigo:", nuevoAmigo);
 
@@ -43,9 +42,21 @@ function App() {
       // setAmigos([...amigos, nuevoAmigo]);
       // Para mostrar el nuvo registro al inicio de la lista de amigos
       setAmigos([nuevoAmigo, ...amigos]);
+
+      limpiarFormulario();
     } catch (error) {
       console.error("Error al agregar amigo:", error);
     }
+  };
+
+  /**
+   * Funcion para limpiar el formulario
+   */
+  const limpiarFormulario = () => {
+    nombreRef.current.value = "";
+    emailRef.current.value = "";
+    telefonoRef.current.value = "";
+    avatarRef.current.value = "";
   };
 
   /**
@@ -59,12 +70,21 @@ function App() {
         setAmigos(response.data);
       } catch (error) {
         console.log("Error al obtener amigos:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     obtenerAmigos();
   }, []);
 
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <div className="loader">Cargando...</div>
+      </div>
+    );
+  }
   return (
     <>
       <ToastContainer />
@@ -80,7 +100,11 @@ function App() {
           />
         </div>
         <div className="col-md-7">
-          <ListaDeAmigos amigos={amigos} URL_API={URL_API} />
+          {amigos.length > 0 ? (
+            <ListaDeAmigos amigos={amigos} URL_API={URL_API} />
+          ) : (
+            <p>No hay amigos registrados.</p>
+          )}
         </div>
       </div>
     </>

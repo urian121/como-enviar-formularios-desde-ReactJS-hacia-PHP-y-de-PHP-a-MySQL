@@ -45,7 +45,14 @@ switch ($metodo) {
 
                     $query = "INSERT INTO $tbl_amigos (nombre, email, telefono, avatar) VALUES ('$nombre', '$email', '$telefono', '$nombreArchivo')";
                     if (mysqli_query($con, $query)) {
-                        echo json_encode(array('message' => 'Nuevo amigo creado correctamente'));
+                        // Consultar el último amigo insertado
+                        $lastInsertedId = mysqli_insert_id($con);
+                        $selectQuery = "SELECT * FROM $tbl_amigos WHERE id = $lastInsertedId";
+                        $result = mysqli_query($con, $selectQuery);
+                        $lastAmigo = mysqli_fetch_assoc($result);
+
+                        // Devolver los detalles del último amigo como JSON
+                        echo json_encode($lastAmigo);
                     } else {
                         echo json_encode(array('error' => 'Error al crear amigo: ' . mysqli_error($con)));
                     }
