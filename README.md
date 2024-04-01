@@ -17,7 +17,7 @@
 
 #### Resultado final
 
-![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/agenda-contactos-react-php-y-mysql.png)
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/enviar-formulario-desde-react-hacia-php.png)
 
 ##### Notas
 

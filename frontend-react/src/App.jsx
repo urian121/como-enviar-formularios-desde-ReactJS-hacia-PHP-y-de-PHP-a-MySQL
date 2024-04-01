@@ -27,7 +27,7 @@ function App() {
       <ToastContainer />
       <div className="row justify-content-md-center">
         <Titulo />
-        <div className="col-md-5">
+        <div className="col-md-5 mb-5">
           <Formulario
             handleSubmit={handleSubmit}
             nombreRef={nombreRef}
