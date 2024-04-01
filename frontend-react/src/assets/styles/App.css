@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+label {
+  display: flex;
+  justify-content: flex-start;
+}
+hr {
+  height: 0.1px !important;
+  color: #06c046 !important;
+  width: 100% !important;
+  background-color: red;
+}
+.titulo {
+  color: #333;
+  font-weight: 800;
+  font-size: 40px;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  font-size: 24px;
+  color: #333;
+}
