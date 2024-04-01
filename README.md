@@ -21,7 +21,8 @@
 
 ##### Notas
 
-    El formulario se envia al backend que esta en php, la ubicacion seria 'backend-php/index.php' esta carpeta si debe estar en un servidor de apache tal vez xampp,. Desde React enviaremos todos los datos del formulario al 'backend-php/index.php' luego php con php capturaremos los datos que se reciben.
+    El formulario se envia al backend que esta en php, la ubicacion seria 'backend-php/index.php' esta carpeta si debe estar en un servidor de apache tal vez xampp.
+    Desde React enviaremos todos los datos del formulario al 'backend-php/index.php' luego php con php capturaremos los datos que se reciben.
 
 ### Expresiones de Gratitud 🎁
 
