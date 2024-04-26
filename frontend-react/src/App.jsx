@@ -12,7 +12,7 @@ import useGestionarFormulario from "./custom_hooks/useGestionarFormulario";
 
 function App() {
   const URL_API =
-    "http://localhost/como-enviar-un-formulario-desde-reactjs-hacia-php/backend-php/";
+    "http://localhost/como-enviar-formularios-desde-ReactJS-hacia-PHP-y-de-PHP-a-MySQL/backend-php/";
 
   const { amigos, setAmigos, loading } = useObtenerAmigos(URL_API);
   const { handleSubmit, nombreRef, emailRef, telefonoRef, avatarRef } =
