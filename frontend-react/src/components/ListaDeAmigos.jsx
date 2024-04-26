@@ -17,7 +17,7 @@ const ListaDeAmigos = ({ amigos, URL_API }) => {
                   className="user-avatar"
                 />
                 <div className="user-details">
-                  <p className="user-details__name">{amigo.nombre}</p>
+                  <p className="user-details__name float-start">{amigo.nombre}</p>
                   <p className="user-details__email">{amigo.email}</p>
                 </div>
               </li>
