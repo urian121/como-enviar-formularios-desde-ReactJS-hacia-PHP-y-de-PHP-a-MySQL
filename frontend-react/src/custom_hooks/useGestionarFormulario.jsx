@@ -25,6 +25,11 @@ const useGestionarFormulario = (URL_API, amigos, setAmigos) => {
       });
       toast.success("Amigo registrado correctamente.");
 
+      /*
+      * Agregando un nuevo amigo (nuevoAmigo) al principio de la lista utilizando el método setAmigos.
+      * Utilizando la sintaxis de spread operator (...) para copiar los amigos existentes y luego agregar el nuevo amigo al inicio.
+      */
+
       const nuevoAmigo = response.data;
       setAmigos([nuevoAmigo, ...amigos]);
 
